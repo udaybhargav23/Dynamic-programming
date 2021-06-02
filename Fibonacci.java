@@ -11,6 +11,8 @@ class Main{
         }else if (arr[num-1]!=0){
             return arr[num-1];
         }
-        return dp(arr,num-1)+dp(arr,num-2);
+        int res = dp(arr,num-1)+dp(arr,num-2);
+        arr[num-1] = res;
+        return res;
     }
 }
